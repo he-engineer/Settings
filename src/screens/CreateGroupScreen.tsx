@@ -42,8 +42,8 @@ const CreateGroupScreen = () => {
           >
             <Card style={[
               styles.restaurantCard,
-              selectedRestaurant === restaurant.id && styles.selectedCard,
-            ]}>
+              selectedRestaurant === restaurant.id ? styles.selectedCard : undefined,
+            ].filter(Boolean) as any}>
               <View style={styles.restaurantHeader}>
                 <Text style={styles.restaurantName}>{restaurant.name}</Text>
                 <Text style={styles.restaurantCuisine}>{restaurant.cuisine}</Text>

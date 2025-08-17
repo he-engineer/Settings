@@ -69,7 +69,11 @@ export const Input: React.FC<InputProps> = ({ label, error, style, ...props }) =
     <View style={styles.inputContainer}>
       {label && <Text style={styles.inputLabel}>{label}</Text>}
       <TextInput
-        style={[styles.input, error && styles.inputError, style]}
+        style={[
+          styles.input,
+          error ? styles.inputError : undefined,
+          style
+        ].filter(Boolean) as any}
         placeholderTextColor={Colors.neutral[500]}
         {...props}
       />
