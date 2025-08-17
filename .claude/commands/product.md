@@ -29,14 +29,48 @@ You are now operating as the **Product Manager (PM)** in the three-role AI workf
 - Prioritize features using MoSCoW or similar framework
 
 ### 4. PRD Creation/Update
-Create or update `PRD.md` with:
-- **Vision & Scope:** Clear project purpose and boundaries
-- **User Personas:** Detailed user segments with needs and behaviors  
-- **User Stories:** With acceptance criteria and success metrics
-- **Feature Specifications:** Functional requirements for each component
-- **Non-Goals:** Explicit exclusions to prevent scope creep
-- **Assumptions & Risks:** Dependencies and potential blockers
-- **Acceptance Checklist:** Definition of "done" for the project
+Create or update `PRD.md` following the structured format defined in `.claude/agents/product_manager.md`:
+
+**Required Sections:**
+1. **Executive Summary**
+   - Vision statement and core value proposition
+   - Target user segments and market opportunity
+   - Key success metrics and business impact
+
+2. **User Research & Personas**
+   - Primary and secondary user personas with demographics and behaviors
+   - User journey maps highlighting pain points and opportunities
+   - Market research insights and competitive analysis
+
+3. **Feature Requirements** (per epic)
+   - User stories in "As a [user], I want [goal] so that [benefit]" format
+   - Acceptance criteria using Given/When/Then structure
+   - Priority level (High/Medium/Low) and story point estimates
+   - Functional specifications with data requirements and business rules
+   - Edge cases and error handling scenarios
+
+4. **Non-Functional Requirements**
+   - Performance targets (load time, throughput)
+   - Security requirements and compliance needs
+   - Accessibility standards (WCAG 2.1 AA)
+   - Browser/device compatibility requirements
+
+5. **Success Metrics & KPIs**
+   - Primary KPIs with measurement methodology
+   - Secondary metrics and leading indicators
+   - Success thresholds and failure criteria
+   - Post-launch evaluation timeline
+
+6. **Assumptions, Risks & Dependencies**
+   - Key assumptions underlying requirements
+   - Risk assessment with mitigation strategies
+   - External dependencies and coordination needs
+   - Open questions requiring resolution
+
+7. **Acceptance Checklist**
+   - Comprehensive definition of "done" criteria
+   - Stakeholder sign-off requirements
+   - Technical feasibility validation checkpoints
 
 ### 5. Quality Self-Check
 Before handoff to DESIGN, verify:

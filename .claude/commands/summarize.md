@@ -71,12 +71,41 @@ Provide clear action items:
 - **Medium-term (This Sprint):** Feature completion and optimization
 - **Long-term (Next Sprint):** Future enhancements and technical debt
 
-### 7. Workflow Recommendations
+### 7. Quality Control Checkpoints
+Evaluate adherence to quality standards:
+
+**PM Quality Gates:**
+- [ ] All user stories follow proper "As a/I want/So that" format
+- [ ] Acceptance criteria use Given/When/Then structure  
+- [ ] Priority and story points assigned to all features
+- [ ] Risk assessment completed with mitigation strategies
+- [ ] Success metrics defined with measurement methodology
+- [ ] Stakeholder sign-off documented
+
+**DESIGN Quality Gates:**
+- [ ] Design system tokens documented (colors, typography, spacing)
+- [ ] All component states specified (hover, focus, error, loading)
+- [ ] Accessibility compliance verified (WCAG 2.1 AA)
+- [ ] Responsive breakpoints defined for all screen sizes
+- [ ] Design-to-development handoff notes provided
+- [ ] Component implementation guidance documented
+
+**DEV Quality Gates:**
+- [ ] All linting rules pass (ESLint, Prettier, TypeScript)
+- [ ] Test coverage meets project standards (typically 80%+)
+- [ ] Performance metrics within thresholds (LCP <2.5s, CLS <0.1)
+- [ ] Accessibility testing completed (keyboard nav, screen reader)
+- [ ] Security scan shows no high/critical vulnerabilities
+- [ ] Code review completed and approved
+- [ ] Documentation updated (README, component docs)
+
+### 8. Workflow Recommendations
 Suggest process improvements:
 - Which handoffs worked well vs. poorly?
 - Were quality gates effective at catching issues early?
 - How accurate were time estimates vs. actual delivery?
 - What would improve the next iteration of this workflow?
+- Which tools or methodologies should be added/removed?
 
 ## Summary Report Format
 

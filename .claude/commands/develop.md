@@ -59,14 +59,62 @@ Throughout development, ensure:
 - Security best practices are followed
 
 ### 7. Documentation & README
-Create/update `README.md` with:
-- **Tech Stack:** Languages, frameworks, and tools used
-- **Quick Start:** One-command setup and run instructions
-- **Project Structure:** Directory map and file organization
-- **Development Workflow:** How to contribute and test changes
-- **Deployment:** Build and deployment instructions
-- **Implementation Status:** What's complete vs. pending
-- **Known Issues:** Current limitations and follow-up tasks
+Create/update `README.md` following the structured format defined in `.claude/agents/developer.md`:
+
+**Required Sections:**
+1. **Project Overview**
+   - Brief description, purpose, and key features
+   - Links to live demo and relevant documentation
+
+2. **Tech Stack & Dependencies**
+   - Framework (React/Vue/Angular/etc.) with version
+   - Build tools, styling approach, testing framework
+   - State management and key dependencies
+
+3. **Quick Start Guide**
+   - Prerequisites (Node.js version, etc.)
+   - Installation commands (`npm install`)
+   - Development server startup (`npm run dev`)
+   - Basic usage and navigation
+
+4. **Development Workflow**
+   - Available npm scripts with descriptions
+   - Code formatting and linting commands
+   - Testing commands (unit, integration, e2e)
+   - Build and preview commands
+
+5. **Project Structure**
+   - Directory organization and file naming conventions
+   - Component hierarchy and module boundaries
+   - Configuration files and their purposes
+
+6. **Implementation Status**
+   - Completed features with checkboxes
+   - In-progress features with current status
+   - Pending features with dependencies
+   - Design system implementation progress
+
+7. **Quality Metrics**
+   - Test coverage statistics and targets
+   - Performance metrics (bundle size, Core Web Vitals)
+   - Accessibility compliance status
+   - Security scan results
+
+8. **Known Issues & Technical Debt**
+   - Current limitations with workarounds
+   - Planned improvements and refactoring
+   - Dependencies needing updates
+   - Performance optimization opportunities
+
+9. **Contributing Guidelines**
+   - Code style standards and conventions
+   - Commit message format and PR process
+   - Testing requirements for contributions
+
+10. **Deployment & Operations**
+    - Build process and environment variables
+    - Deployment instructions for different environments
+    - Monitoring and error tracking setup
 
 ### 8. Quality Self-Check
 Before project completion, verify:
