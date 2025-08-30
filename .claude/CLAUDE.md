@@ -1,6 +1,6 @@
 # CLAUDE.md — AI SDLC Playbook
 
-Eight-stage workflow: **RESEARCH** → **PRODUCT** → **DESIGN** → **ARCHITECTURE** → **ENGINEERING** → **IMPLEMENTATION** → **TESTING** → **DEPLOYMENT**
+Nine-stage workflow: **RESEARCH** → **PRODUCT** → **DESIGN** → **ARCHITECTURE** → **ENGINEERING** → **IMPLEMENTATION** → **REVIEW** → **TESTING** → **DEPLOYMENT**
 
 ## Quick Start
 1. `/research` → Create UX_RESEARCH.md
@@ -9,9 +9,10 @@ Eight-stage workflow: **RESEARCH** → **PRODUCT** → **DESIGN** → **ARCHITEC
 4. `/architect` → Create HLD.md
 5. `/engineer` → Create LLD.md
 6. `/implement` → Build /src + README.md
-7. `/test` → Create TEST_PLAN.md
-8. `/deploy` → Create OPERATIONS.md
-9. `/summarize` → Review status
+7. `/review` → Create CODE_REVIEW.md
+8. `/test` → Create TEST_PLAN.md
+9. `/deploy` → Create OPERATIONS.md
+10. `/summarize` → Review status
 
 ## Core Rules
 - **User-experience driven**: Design informs technical decisions
@@ -27,12 +28,13 @@ Eight-stage workflow: **RESEARCH** → **PRODUCT** → **DESIGN** → **ARCHITEC
 ├─ DESIGN_SPEC.md      # Design system & UX specs
 ├─ HLD.md              # High-level architecture
 ├─ LLD.md              # Low-level technical design
+├─ CODE_REVIEW.md      # Peer review & quality assessment
 ├─ TEST_PLAN.md        # Quality assurance strategy
 ├─ OPERATIONS.md       # Deployment & monitoring
 ├─ README.md           # Implementation documentation
 ├─ /src                # Code implementation
 └─ .claude/
-   ├─ commands/        # Slash commands (/research, /plan, /design, /architect, /engineer, /implement, /test, /deploy, /summarize)
+   ├─ commands/        # Slash commands (/research, /plan, /design, /architect, /engineer, /implement, /review, /test, /deploy, /summarize)
    └─ agents/          # Role definitions & templates
 ```
 
@@ -72,7 +74,13 @@ Eight-stage workflow: **RESEARCH** → **PRODUCT** → **DESIGN** → **ARCHITEC
 - Build solution following technical specifications
 - Code quality, testing, and documentation
 - Performance optimization and accessibility compliance
-- **Quality check**: Ready for comprehensive testing and validation?
+- **Quality check**: Ready for peer review and validation?
+
+### REVIEW → CODE_REVIEW.md
+- Comprehensive peer review of implementation quality
+- Validate architecture alignment and security compliance
+- Assess performance impact and maintainability
+- **Quality check**: Code meets standards and ready for testing?
 
 ### TESTING → TEST_PLAN.md
 - Comprehensive quality assurance across all dimensions
@@ -97,7 +105,8 @@ Eight-stage workflow: **RESEARCH** → **PRODUCT** → **DESIGN** → **ARCHITEC
 - **DESIGN**: Accessibility compliant, all states specified, architecture handoff ready
 - **ARCHITECTURE**: Technology choices justified, performance targets defined, security reviewed
 - **ENGINEERING**: Technical interfaces precise, APIs documented, contracts complete
-- **IMPLEMENTATION**: Tests pass, performance targets met, accessibility verified
+- **IMPLEMENTATION**: Code complete, unit tests passing, documentation updated
+- **REVIEW**: Peer approved, architecture aligned, security cleared, performance acceptable
 - **TESTING**: Security scanned, cross-platform tested, quality gates achieved
 - **DEPLOYMENT**: Monitoring active, procedures documented, operational excellence
 
@@ -116,6 +125,7 @@ Eight-stage workflow: **RESEARCH** → **PRODUCT** → **DESIGN** → **ARCHITEC
 - **software_architect.md** - System architecture and technology strategy expert
 - **software_engineer.md** - Technical design and API specifications specialist
 - **developer.md** - Implementation and code quality specialist
+- **code_reviewer.md** - Peer review and code quality assurance specialist
 - **qa_engineer.md** - Quality assurance and testing strategy expert
 - **devops_engineer.md** - Deployment and operations management specialist
 

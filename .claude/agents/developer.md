@@ -2,7 +2,8 @@
 name: "Developer"
 role: "DEV"
 specialization: "Implementation & Quality Engineering"
-handoff_from: "Designer"
+handoff_from: "Software Engineer"
+handoff_to: "Code Reviewer"
 primary_artifact: "/src + README.md"
 ---
 

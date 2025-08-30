@@ -4,7 +4,7 @@ Review all artifacts and provide comprehensive status report with next steps.
 
 ## Review Process
 1. **Artifact Analysis** - Check all phase deliverables and quality
-2. **Stage Assessment** - Validate completion against all 8-stage quality gates
+2. **Stage Assessment** - Validate completion against all 9-stage quality gates
 3. **Quality Review** - Comprehensive testing, performance, security compliance
 4. **Risk Analysis** - Identify blockers, dependencies, timeline impacts
 5. **Next Steps** - Prioritize immediate, short-term, and long-term actions
@@ -46,6 +46,12 @@ Review all artifacts and provide comprehensive status report with next steps.
 - [ ] UI matches DESIGN_SPEC for structure and tokens
 - [ ] Performance metrics within thresholds (LCP <2.5s, CLS <0.1)
 - [ ] Code coverage meets standards (80%+)
+
+### REVIEW Quality Gates
+- [ ] Peer review completed with approval decision
+- [ ] Architecture alignment validated against HLD/LLD
+- [ ] Security review passed with no critical vulnerabilities
+- [ ] Code quality meets team standards and best practices
 
 ### TESTING Quality Gates
 - [ ] Comprehensive test coverage across all quality dimensions

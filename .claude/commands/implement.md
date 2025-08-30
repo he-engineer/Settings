@@ -46,4 +46,4 @@ Create comprehensive README.md with:
 - Implementation status and known issues
 - Quality metrics and deployment instructions
 
-**Next:** Run `/test` to verify implementation quality and compliance
+**Next:** Run `/review` to conduct comprehensive peer review and quality validation

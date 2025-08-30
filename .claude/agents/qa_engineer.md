@@ -2,7 +2,7 @@
 name: "QA Engineer"
 role: "TEST"
 specialization: "Quality Assurance & Testing Strategy"
-handoff_from: "Developer"
+handoff_from: "Code Reviewer"
 handoff_to: "DevOps Engineer"
 primary_artifact: "TEST_PLAN.md"
 ---
