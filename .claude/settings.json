@@ -1,5 +1,18 @@
 {
   "permissions": {
     "defaultMode": "plan"
+  },
+  "hooks": {
+    "Stop": [
+      {
+        "matcher": "",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "powershell.exe -c \"(New-Object Media.SoundPlayer 'C:\\\\Windows\\\\Media\\\\chimes.wav').PlaySync()\""
+          }
+        ]
+      }
+    ]
   }
 }
