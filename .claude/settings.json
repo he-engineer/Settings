@@ -9,7 +9,7 @@
         "hooks": [
           {
             "type": "command",
-            "command": "powershell.exe -c \"(New-Object Media.SoundPlayer 'C:\\\\Windows\\\\Media\\\\chimes.wav').PlaySync()\""
+            "command": "powershell.exe -c \"(New-Object Media.SoundPlayer 'C:\\\\Windows\\\\Media\\\\Windows Notify Messaging.wav').PlaySync()\""
           }
         ]
       }
