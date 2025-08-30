@@ -1,254 +1,105 @@
-# Group Meal App
+# AI SDLC Settings (CLAUDE Playbook)
 
-A React Native mobile application that enables office workers to form meal groups for lunch orders, unlocking group discounts and fostering workplace connections.
+This repository contains a lightweight, document‑first software development workflow you can use with AI assistants. It centers on a nine‑stage SDLC playbook and a set of role/command prompts stored under `.claude/`.
 
-## 🚀 Quick Start
+The playbook encourages clear handoffs, quality gates, and evidence‑based decisions while producing well‑structured artifacts (PRD, design specs, HLD/LLD, test plan, operations guide) before and during implementation.
 
-### Prerequisites
-- Node.js 18+ 
-- npm or yarn
-- Expo CLI (`npm install -g @expo/cli`)
-- iOS Simulator (Mac) or Android Studio (for emulators)
+## Quick Start
 
-### Installation & Setup
+- Read `.claude/CLAUDE.md` for the end‑to‑end workflow and quality gates.
+- Use the command prompts in `.claude/commands/` to drive each stage:
+  - `/research` → UX_RESEARCH.md
+  - `/plan` → PRD.md
+  - `/design` → DESIGN_SPEC.md
+  - `/architect` → HLD.md
+  - `/engineer` → LLD.md
+  - `/implement` → build `/src` + README updates
+  - `/review` → CODE_REVIEW.md
+  - `/test` → TEST_PLAN.md
+  - `/deploy` → OPERATIONS.md
 
-```bash
-# Clone the repository
-git clone <repository-url>
-cd group-meal-app
+You can copy the `.claude/` folder into any project root to adopt this workflow. Artifacts are created in the repository root as you progress through the stages.
 
-# Navigate to source directory
-cd src
-
-# Install dependencies
-npm install
-
-# Start the development server
-npm start
-
-# Run on specific platforms
-npm run ios       # iOS simulator
-npm run android   # Android emulator  
-npm run web       # Web browser
-```
-
-## 📱 Features
-
-### Core Functionality
-✅ **Group Discovery** - Browse available meal groups nearby  
-✅ **Group Creation** - Create new groups with restaurant and time selection  
-✅ **Order Management** - View order history and track active orders  
-✅ **User Profile** - Manage personal information and preferences  
-
-### Design System
-✅ **Responsive Design** - Mobile-first with tablet support  
-✅ **Accessibility** - WCAG 2.1 AA compliant  
-✅ **Component Library** - Reusable UI components with design tokens  
-✅ **Cross-Platform** - Consistent experience on iOS and Android  
-
-## 🏗️ Project Structure
+## What’s Inside
 
 ```
-src/
-├── App.tsx                 # Root application component
-├── components/             # Reusable UI components
-│   └── index.tsx          # Button, Card, Input, StatusBadge
-├── constants/              # Design tokens and app constants
-│   └── tokens.ts          # Colors, Typography, Spacing
-├── navigation/             # Navigation configuration
-│   └── AppNavigator.tsx   # Tab and stack navigation
-├── screens/                # Application screens
-│   ├── GroupDiscoveryScreen.tsx
-│   ├── CreateGroupScreen.tsx  
-│   ├── OrdersScreen.tsx
-│   └── ProfileScreen.tsx
-├── package.json           # Dependencies and scripts
-├── app.json              # Expo configuration
-├── tsconfig.json         # TypeScript configuration
-└── babel.config.js       # Babel configuration
+.claude/
+  CLAUDE.md               # Master AI SDLC playbook (9 stages, quality gates)
+  settings.json           # Default behavior (e.g., permission mode)
+  settings.local.json     # Local overrides (e.g., allowed tools)
+  commands/               # Slash-command workflows for each stage
+    architect.md
+    deploy.md
+    design.md
+    engineer.md
+    implement.md
+    plan.md
+    research.md
+    review.md
+    summarize.md
+    test.md
+  agents/                 # Role definitions and templates
+    code_reviewer.md
+    developer.md
+    devops_engineer.md
+    product_manager.md
+    qa_engineer.md
+    software_architect.md
+    software_engineer.md
+    ux_designer.md
+    ux_researcher.md
+
+README.md                 # You are here
+LICENSE                   # Apache-2.0
 ```
 
-## 🎨 Design System
+## Core Principles
 
-### Color Palette
-- **Primary**: Blue (#0066CC) - Trust & reliability
-- **Success**: Green (#22C55E) - Group formation & payments  
-- **Warning**: Orange (#F97316) - Time limits & alerts
-- **Error**: Red (#EF4444) - Payment issues & failures
-- **Neutral**: Gray scale for text & backgrounds
+- User‑experience driven: UX informs technical decisions.
+- Document‑first: Specs precede implementation.
+- Single responsibility: Each role owns specific artifacts.
+- Quality gates: Each stage must pass validation before handoff.
+- Evidence‑based: Decisions backed by research and data.
 
-### Typography Scale
-- **H1**: 28px/34px, Bold - Page titles
-- **H2**: 24px/30px, Semibold - Section headers
-- **H3**: 20px/26px, Semibold - Card titles
-- **Base**: 16px/22px, Regular - Body text
-- **Small**: 14px/20px, Regular - Secondary info
+## Recommended Flow
 
-### Component States
-All interactive components include:
-- Default, hover, focus, disabled states
-- Loading states with spinners
-- Error states with validation messages
-- Accessibility labels and hints
+1) Research → UX_RESEARCH.md
 
-## 🔧 Development Workflow
+2) Product → PRD.md
 
-### Available Scripts
-```bash
-npm start          # Start Expo development server
-npm run android    # Run on Android emulator
-npm run ios        # Run on iOS simulator  
-npm run web        # Run in web browser
-npm test           # Run test suite (when implemented)
-```
+3) Design → DESIGN_SPEC.md
 
-### Code Quality
-- **TypeScript**: Full type safety with strict mode
-- **React Native**: Cross-platform mobile development
-- **Expo**: Simplified development and deployment
-- **Component Architecture**: Atomic design principles
+4) Architecture → HLD.md
 
-## 📊 Implementation Status
+5) Engineering → LLD.md
 
-### ✅ Completed Features
+6) Implementation → `/src` + README updates (see `.claude/commands/implement.md` and `.claude/agents/developer.md`)
 
-#### Foundation (Phase 1)
-- [x] Project setup with Expo TypeScript template
-- [x] Design token system extracted from DESIGN_SPEC
-- [x] Project architecture and directory structure
-- [x] Navigation system with bottom tabs
+7) Review → CODE_REVIEW.md
 
-#### Components (Phase 2)  
-- [x] Base component library (Button, Input, Card, StatusBadge)
-- [x] Design system implementation with tokens
-- [x] Responsive layout patterns
-- [x] Accessibility compliance foundations
+8) Testing → TEST_PLAN.md
 
-#### Features (Phase 3)
-- [x] Group Discovery screen with mock data
-- [x] Group Creation flow with restaurant/time selection
-- [x] Orders screen with status tracking
-- [x] Profile screen with user stats and settings
-- [x] Cross-screen navigation and state
+9) Deployment → OPERATIONS.md
 
-### 🔄 In Progress
-- [ ] State management implementation (Redux/Context)
-- [ ] Real-time group updates (WebSocket/Socket.io)  
-- [ ] Payment integration (Stripe/PayPal)
-- [ ] Location services (GPS, restaurant proximity)
+Each command file in `.claude/commands/` provides prerequisites, steps, required sections, and quality checks for that stage.
 
-### 📋 Pending Implementation
-- [ ] End-to-end testing suite
-- [ ] Push notification system
-- [ ] Performance optimization
-- [ ] Restaurant partner API integration
-- [ ] Analytics and crash reporting
+## Using With an AI Assistant
 
-## 🎯 User Stories Implementation
+- Open the relevant `.claude/commands/*.md` and use it as a structured prompt to guide the assistant’s work for that stage.
+- Reference role files under `.claude/agents/` when you want the assistant to act as a specific role (e.g., Product Manager, Developer, QA Engineer).
+- Maintain artifacts in the repository root; commit updates at each stage to preserve a clear artifact trail.
 
-### Epic 1: Group Formation ✅
-- **US-001**: Create meal group with restaurant/time selection ✅
-- **US-002**: Join available groups with real-time updates ✅
+## Git Conventions (Suggested)
 
-### Epic 2: Ordering & Payment 🔄
-- **US-003**: Browse menu and place group orders (Pending API)
-- **US-004**: Split payment automatically (Pending Stripe)
+- Branches: `feature/stage-description` (e.g., `feature/research-user-onboarding`)
+- Commits: `type(scope): description` and link to artifacts/decisions
+- PRs: Include artifact diffs, quality gate status, and test results
 
-### Epic 3: Pickup & Notifications 🔄  
-- **US-005**: Track order status with notifications (Pending push)
+## Notes
 
-## 🚨 Known Issues
+- `.gitignore` currently includes entries for AL (Dynamics 365 BC) projects; keep or adjust for your stack.
+- This repo is a workflow scaffold; it does not include application code until you reach the Implementation stage.
 
-### Critical
-- Real-time features not implemented (mock data only)
-- Payment processing not integrated
-- Location services not implemented
+## License
 
-### Minor
-- Some dependency warnings during installation
-- Missing restaurant menu data
-- Push notifications not configured
-
-### Performance
-- Large list rendering could benefit from virtualization
-- Image optimization for restaurant photos pending
-- Bundle size optimization needed for production
-
-## 🔐 Security Considerations
-
-### Data Protection
-- No sensitive data stored locally (pending implementation)
-- Payment data will be handled by certified processors
-- User authentication tokens need secure storage
-
-### API Security  
-- HTTPS enforcement for all network requests
-- Rate limiting for group creation/joining
-- Input validation on all form submissions
-
-## 📈 Success Metrics
-
-### Technical KPIs
-- **App Launch Time**: <3 seconds ⏱️
-- **Navigation Performance**: <300ms transitions ⚡
-- **Crash-Free Rate**: 99.5% target 📊
-- **Bundle Size**: <10MB target 📦
-
-### Business KPIs (From PRD)
-- **Average Group Size**: 3+ people target 👥
-- **Order Completion Rate**: 85% target ✅  
-- **User Retention**: 60% weekly target 🔄
-- **Time to Form Group**: <2 minutes target ⏰
-
-## 🚀 Deployment
-
-### Development
-```bash
-# Start development server
-npm start
-
-# Install on device via Expo Go app
-# Scan QR code from terminal
-```
-
-### Production (Future)
-- **iOS**: App Store via EAS Build
-- **Android**: Google Play Store via EAS Build  
-- **OTA Updates**: Expo Updates for JS-only changes
-
-## 🤝 Contributing
-
-### Code Style
-- TypeScript strict mode required
-- Functional components with hooks
-- Atomic design component structure  
-- Mobile-first responsive design
-
-### Pull Request Process
-1. Feature branch from `main`
-2. Implement with test coverage
-3. Update documentation if needed
-4. Submit PR with detailed description
-
-## 📞 Support
-
-### Development Issues
-- Check console logs for React Native errors
-- Use Expo DevTools for debugging
-- Test on both iOS and Android platforms
-
-### Production Support
-- Analytics: Expo Analytics (pending)
-- Crash Reporting: Sentry (pending)
-- Performance: Flipper integration (pending)
-
----
-
-**Version**: 1.0.0  
-**Last Updated**: 2025-08-17  
-**Development Status**: MVP Complete, API Integration Pending  
-**Next Milestone**: Real-time features and payment integration
-
-🤖 Generated with [Claude Code](https://claude.ai/code)
-
-Co-Authored-By: Claude <noreply@anthropic.com>
+Licensed under the Apache License, Version 2.0 (see `LICENSE`).
