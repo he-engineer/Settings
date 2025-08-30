@@ -1,13 +1,18 @@
-# /product - Product Manager Workflow
+# /plan - Product Manager Workflow
 
-Transform business ideas into detailed requirements and create comprehensive PRD.md.
+Transform user research insights into detailed product requirements. Creates comprehensive PRD.md.
+
+## Prerequisites
+- UX_RESEARCH.md must exist with user insights and personas
+- Business objectives and constraints understood
+- Stakeholder alignment on product direction
 
 ## Steps
-1. **Gather Requirements** - Interview stakeholders, understand constraints and goals
-2. **Research Users** - Define personas, map journeys, analyze pain points
+1. **Analyze Research** - Review UX research findings and user insights
+2. **Define Requirements** - Transform user needs into product features
 3. **Prioritize Features** - Use MoSCoW framework, estimate story points
 4. **Document Risks** - Assess dependencies, mitigation strategies
-5. **Define Success** - Set KPIs, measurement methodology
+5. **Define Success** - Set KPIs aligned with user research and business goals
 6. **Create PRD** - See template in `.claude/agents/product_manager.md`
 
 ## PRD.md Required Sections
@@ -30,4 +35,4 @@ Transform business ideas into detailed requirements and create comprehensive PRD
 - Schedule designer briefing
 - Document open questions
 
-**Next:** Run `/design` to begin design workflow
+**Next:** Run `/design` to create optimal user experience design

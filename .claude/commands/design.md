@@ -1,17 +1,18 @@
-# /design - Designer Workflow
+# /design - UX Designer Workflow
 
-Read PRD.md and create comprehensive DESIGN_SPEC.md with design system and specifications.
+Create optimal user experience and design system. Creates comprehensive DESIGN_SPEC.md.
 
 ## Prerequisites
-- PRD.md must exist and be complete
-- Review PM's acceptance checklist
+- PRD.md must exist with product requirements
+- User research insights available for design decisions
+- Business and technical constraints understood
 
 ## Steps
 1. **Analyze Requirements** - Understand user personas and constraints from PRD
 2. **Design Strategy** - Define principles, accessibility approach, responsive strategy
 3. **Design System** - Colors, typography, spacing, component states
 4. **Layout Design** - Wireframes, responsive behavior, interaction patterns
-5. **Create DESIGN_SPEC** - See template in `.claude/agents/designer.md`
+5. **Create DESIGN_SPEC** - See template in `.claude/agents/ux_designer.md`
 
 ## DESIGN_SPEC.md Required Sections
 - **Design Principles** - Philosophy, tone, accessibility standards
@@ -25,14 +26,14 @@ Read PRD.md and create comprehensive DESIGN_SPEC.md with design system and speci
 ## Quality Check
 - [ ] Is the design system consistent and reusable?
 - [ ] Are all component states and accessibility rules specified?
-- [ ] Can DEV implement without guessing layout or design tokens?
+- [ ] Can SOFTWARE ARCHITECT make informed technology decisions from this design?
 - [ ] Does design meet WCAG 2.1 AA accessibility standards?
-- [ ] Are responsive breakpoints defined for all screen sizes?
+- [ ] Are responsive breakpoints and performance considerations defined?
 - [ ] Have design tokens been validated across themes?
 
-## Handoff to Dev
-- Export design tokens in developer-friendly format
+## Handoff to Architecture
+- Export design tokens and component specifications
 - Update DESIGN_SPEC changelog
-- Provide implementation notes and guidance
+- Document performance and technical considerations
 
-**Next:** Run `/develop` to begin development workflow
+**Next:** Run `/architect` to design system architecture

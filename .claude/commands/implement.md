@@ -1,10 +1,11 @@
-# /develop - Developer Workflow
+# /implement - Implementation Workflow
 
-Read PRD.md + DESIGN_SPEC.md and implement solution with /src code + README.md documentation.
+Implement solution based on detailed technical specifications. Creates /src code and README.md documentation.
 
-## Prerequisites  
-- PRD.md and DESIGN_SPEC.md must exist and be complete
-- Review PM and DESIGN acceptance checklists
+## Prerequisites
+- LLD.md must exist with detailed technical specifications
+- HLD.md and DESIGN_SPEC.md available for reference
+- Development environment and tooling configured
 
 ## Implementation Phases
 
@@ -45,4 +46,4 @@ Create comprehensive README.md with:
 - Implementation status and known issues
 - Quality metrics and deployment instructions
 
-**Next:** Run `/summarize` to review project status
+**Next:** Run `/test` to verify implementation quality and compliance
